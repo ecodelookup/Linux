@@ -1,0 +1,54 @@
+1.Starting the vi Editor:
+  vi filename -> Creates a new file if it already does not exist, otherwise opens an existing file.
+  vi -R filename -> Opens an existing file in the read-only mode.
+
+2.vi Modes:
+  command mode:In command mode, the letters of the keyboard perform editing functions 
+  (like moving the cursor, deleting text, etc.). To enter command mode, press the escape <Esc> key.
+  
+  insert mode:In insert mode, the letters you type form words and sentences. 
+  Unlike many word processors, vi starts up in command mode. press i to be in insert mode.
+ 
+3: Moving around
+  1G- Moves to the first line of the file
+  G-Moves to the last line of the file
+  nG-Moves to the nth line of the file
+  :n-Moves to the nth line of the file
+  CTRL+I - Redraws the screen
+  H-Moves to the top of the screen
+  M-Moves to the middle of the screen
+  L-Move to the bottom of the screen
+
+4. Copy paste
+   v - text selection starts 
+   y - copy
+   p - paste
+   d - delete , dd - delete the line
+   u - undo
+   
+ 5. search
+  The / command searches forwards (downwards) in the file.
+  The ? command searches backwards (upwards) in the file.
+  The n and N commands repeat the previous search command in the same or the opposite direction,
+  special characters must be preceded by a backslash (\) to be included as part of the search expression.
+	^ - Searches at the beginning of the line (Use at the beginning of a search expression).
+	. - Matches a single character.
+	* - Matches zero or more of the previous character.
+	$ - End of the line (Use at the end of the search expression).
+	[ - Starts a set of matching or non-matching expressions.
+
+6. set commands
+   :set nu - Displays lines with line numbers on the left side
+   :set nonu - remove line numbers
+   
+7: running commands
+   :! cmd
+   
+8: CLOSING AND SAVING A FILE
+
+    ZZ  or :wq    save file and then quit
+    :w            save file
+    :q!           discard changes and quit file
+ 
+  
+  
