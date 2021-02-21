@@ -1,0 +1,137 @@
+//-------------------------------------------//
+   		 NAVIGATION
+//-------------------------------------------//
+ls :=>    list  files and directories
+ls -l => list
+ls -a => hidden files (.filename)
+ls -h => human readable file size
+ls -X => Group the same extensions together
+ls -p => directory mark with /
+ls -t => list accoring to file modified
+ls -r => list in reverse order
+ls -R => display the content of sub directories
+
+
+pwd:=>     present working directory
+
+cd :=>     change directory
+cd path => path can be absolute or relative, tab can be used for path suggestion or completion
+cd ..   => parent directory
+cd ~     => change to home directory
+cd ~user=> change to other user home directory
+cd /	=> open root folder
+cd -     => last directory
+cd 'dir name' => change to directory name with spaces
+
+
+//------------------------------------------//
+   	 FILES AND DIRECTORIES
+//------------------------------------------//
+files :=> - text, d directory, b block file, c char file, p pipe file, l symbolik link, s socket file
+
+
+file :=> tells about file type, independent of extension
+file filename => tells about file
+
+
+stat :=> to see the access and modify timestamps of file
+stat filename => see all timestamps of file
+
+
+touch :=>  create new empty file
+touch filename
+touch filename1 filename2
+touch -a filename => used to change access time of the file to current time
+touch -m filename => used to change modify time of the file to current time
+touch -r ref_file org_file => change the time-stamp of org_file to ref_file
+touch -t YYYYMMDDhhmmss filename => change the access time to specified time-stamp
+
+
+mkdir :=> make directory
+mkdir dirname =>  make the directory at the current position
+mkdir dir1 dir2 dir3 => multiple directories
+
+
+rmdir :=> remove directory
+rmdir dir => remove the directory
+rmdir -p dir => remove directory and subdirectories
+
+
+mv :=> mv can be used to move , rename directories or files
+mv oldname newname => rename file or directory
+
+rm :=> remove file
+rm filename => remove a file
+rm -r => remove a directory having subdirectories
+rm -i => interactive , ask before delete
+rm -f => delete forcefully (have read only access)
+rm *.text => delete all text files at that location
+
+
+cp :=> copy file or directory
+cp existing_file new_file => copy the existing file
+cp -r source destination => copy a directory including subdirectories
+cp *.txt destination => copy all text files to destination
+cp -i file destination => confirm before overwriting
+cp -l filename destination => create hardlink instead of copying
+cp -p filename destination => preserve the properties and attributes of the file
+
+
+//----------------------------------------//
+   		 FILE CONTENTS
+//----------------------------------------//
+cat:=    	 display the contents of file
+cat filename => display contents of file
+cat > filename => creates a new file , after editing ctrl+d to save and exit
+cat >> filename => append a file
+cat filename1 > filename2 => copy contents from filename1 to filename2
+cat file1 file2 > file3 => concatenate the contents of file
+cat -n filename  => show line numbers
+cat -b filename  => remove empty lines
+
+
+tac:=   	 display the contents , last line first
+tac filename => display the contents
+
+
+head    := display top 10 line content of file
+head filename => file top contents
+head -10 file name  => file top 10 lines
+head -c 20 filename =>  show 20 bytes of file
+head -c 20b filename => 20 * 512 bytes content of file
+head -c 20k filename => 20 * 1024 bytes content of file
+head -c 20m filename => 20 * 1mb bytes of content
+
+
+tail    :=> display the last 10 lines of content of file
+tail filename
+tail -n 20 filename => display last 20 lines content
+tail -c 20 filename => display last 20 bytes of content , 20b = bytes(512), 20k = kilobytes, 20m megabytes
+tail -f filename => following(track) the changes in the file, ctrl+c to end tracking
+ls -t /etc | tail -n 6 => adding with other commands
+tail -f /var/log/auth.log => check who is trying to log currently
+
+
+less:=>   	 display long files
+less filename => show the contents one page first
+other cmds:
+/key => forward search
+?key => backward search
+n => next search occurance
+N => previous search occurance
+navigation -> up down arrow, g - start of file , G - end of file, q quit
+
+
+//------------------------------------------//
+   		 USER MANAGEMENT
+//------------------------------------------//
+
+
+//----------------------------------------//
+   			 PROCESSES
+//----------------------------------------//
+
+
+
+
+
