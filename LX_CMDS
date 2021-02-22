@@ -121,15 +121,46 @@ n => next search occurance
 N => previous search occurance
 navigation -> up down arrow, g - start of file , G - end of file, q quit
 
+//--------------------------------------------//
+         MAN PAGES 
+//--------------------------------------------//
+man :=>display the manual page of the command
+man command
+man n command=> n is the section number
+
+
+//--------------------------------------------//
+                   MAN PAGES 
+//--------------------------------------------//
+man :=>  display the manual page of the command
+man command
+man n command => n is the section numbe
+man -f command => short description about the particular manual page
+man -k keyword => show keyword related commands
+
+
+whatis :=>  get the brief information about the command
+whatis command => discription about the command
+whatis -r regexp => find the regexp command and display its discription
 
 //------------------------------------------//
-   		 USER MANAGEMENT
+   		        USER MANAGEMENT
 //------------------------------------------//
+whoami :=> tells about the system username
 
 
-//----------------------------------------//
-   			 PROCESSES
-//----------------------------------------//
+who :=> user who logged in to the system
+
+
+w :=> tell about all the users currently logged in and what are they doing
+
+id :=> tells about the user id, group id, and list of groups belong to 
+id
+id username
+
+
+useradd :=> add user or modify details of the user
+useradd username
 
 
 
