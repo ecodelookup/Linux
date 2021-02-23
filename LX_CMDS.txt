@@ -144,7 +144,7 @@ whatis command => discription about the command
 whatis -r regexp => find the regexp command and display its discription
 
 //------------------------------------------//
-   		        USER MANAGEMENT
+           USER MANAGEMENT
 //------------------------------------------//
 whoami :=> tells about the system username
 
@@ -160,9 +160,40 @@ id username
 
 
 useradd :=> add user or modify details of the user
-useradd username
+useradd username => creates user
+useradd -m username => create user with home directory
+useradd -m -d /dirname username => create user with home directory at different place 
+username -m -e 2020-03-16 username => create user with expiry date
 
 
+passwd :=>  change password of user
+sudo passwd => set password or change password of current user
 
+
+su :=> run shell as another user
+su username => run shell as another user
+su 			=> run shell as root user
+su - username => use target user shell environment
+su -          => root environmnet
+
+
+sudo command => run command with root level access
+
+
+userdel :=> delete user
+userdel -r username => delete user account
+
+
+usermod :=> modify user details
+usermod -c 'newname' oldname => change username
+usermod -s newshell username
+usermod -L username => locking a user
+usermod -U username => unlocking a user
+
+
+chsh :=> change the shell of the user
+
+chage :=> know user password information
+chage -l username => information about user expiry
 
 
