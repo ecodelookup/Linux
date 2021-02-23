@@ -196,6 +196,6 @@ chsh :=> change the shell of the user
 chage :=> know user password information
 chage -l username => information about user expiry
 
-groupadd 
+groupadd changes
 
 
