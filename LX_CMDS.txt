@@ -122,15 +122,7 @@ N => previous search occurance
 navigation -> up down arrow, g - start of file , G - end of file, q quit
 
 //--------------------------------------------//
-         MAN PAGES 
-//--------------------------------------------//
-man :=>display the manual page of the command
-man command
-man n command=> n is the section number
-
-
-//--------------------------------------------//
-                   MAN PAGES 
+       MAN PAGES 
 //--------------------------------------------//
 man :=>  display the manual page of the command
 man command
@@ -144,7 +136,7 @@ whatis command => discription about the command
 whatis -r regexp => find the regexp command and display its discription
 
 //------------------------------------------//
-           USER MANAGEMENT
+     USER MANAGEMENT AND GROUP MANAGEMENT
 //------------------------------------------//
 whoami :=> tells about the system username
 
@@ -196,6 +188,57 @@ chsh :=> change the shell of the user
 chage :=> know user password information
 chage -l username => information about user expiry
 
-groupadd changes
+groupadd :=> creates group in the system 
+groupadd groupname => creates a group
+groups => current user groups
+usermod -a -G groupname username => add group to user
+groupmod -n oldgroupname newgroupname => change existing group name
+groupdel => delete group
+gpasswd -A username groupname => Control of group membership can be passed on to another user
+gpasswd -d username group name => remove a user from a group
+getent group => list all the groups in the system
+usermod -g groupname username => change primary group of the user  
+
+
+//------------------------------------------------------//
+            LINUX PROCESSES
+//------------------------------------------------------//
+top :=> to display linux process
+ps :=> display process
+ps aux => display all process of all users
+ps -A => lis process with pid
+pidof processname :=> find the pid of process
+
+killall :=> kill a process
+killall processname => kill a process
+killall -SIGKILL processname => kill a process focefully
+killall -i => kill a process interactively
+killall -o 20m => kill a process that running for morethan 20minutes
+killall -y 20m => kill a process that is running for less than 20 minutes 
+
+
+pkill :=> kill a process with process name as a keyword
+pkill processname => kill a process with name matching to the given keyword
+pkill -SIGKILL processname => kill a process forcefully
+
+
+kill:=>  kil a process with PID 
+kill PID => kill process with PID
+kill -SIGKILL PID => kill process focefully
+kill -l => list of all signals
+
+nohup :=> keep running a process even after exiting the shell
+nohup cat filename => output of the command can be found at nohup.out file
+nohup cat filename > newfile => output of command can be found at newfile
+
+
+exit :=> to exit the shell
+
+
+//---------------------------------------------------------------//
+    I/O REDIRECTION 
+//----------------------------------------------------------------//
+
+
 
 
