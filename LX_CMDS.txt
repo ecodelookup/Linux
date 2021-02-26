@@ -236,8 +236,65 @@ exit :=> to exit the shell
 
 
 //---------------------------------------------------------------//
-    I/O REDIRECTION 
+    # I/O REDIRECTION 
 //----------------------------------------------------------------//
+standard input -> stdin(0)    <  or 0<
+standard output -> stdout(1)  >  or 1>
+standard error -> stderr(2)   2> or 2>
+
+
+append => 
+>>
+<<
+2>>
+
+
+redirection in to a program 
+ls *.ls | cat > txtfile => output is written on txtfile
+echo hello > text.txt  => hello is written to text.txt
+zcho hyii 2> /dev/null   => redirecting  error message to null
+newfile.txt > abc.txt and error.txt 2>&1  => 'abc.txt and error.txt' is directing to the same file 'newfile.txt'
+
+
+//-----------------------------------------------------//
+   BASIC TOOLS 
+//-----------------------------------------------------//
+find :=>  The find command helps us to find a particular file within a directory. 
+It is used to find the list of files for the various conditions like 
+permission, user ownership, modification, date/time, size, and more
+     find <location> <comparison-criteria> <search-term>  
+
+
+find . -name "*.txt" => search all .txt file with in current directory
+find . -type d -name "*.bak"  => search all directories with extenion .bak in current folder.
+       d - directory
+	   f - file
+	   l - link
+	   c - character devices
+	   b - block devices
+find . -newer msg.txt => file newer than msg.txt
+find . -name demo.txt -delete => find and delete a file
+find ./dir -mtime -1 =>  find a file that are modified within last day.
+find ./dir -perm 777 => find the files with permission 777
+
+
+locate :=> locate command also used to find file but is searches in background, 
+          not in the file system and faster than find command
+locate filename => locate the file 
+locate -n 5 "*.txt" => display only the 5 results from the query
+locate -c "*.txt" => display the count of matching result.
+locate -i "demo.txt" => search with ignore case senstivity
+loacte -i -e "demo.txt" => only search the existing files not deleted
+sudo updatedb => to update mlocated database for locate.
+locate -S => mlocate database status
+
+
+
+
+
+
+
+
 
 
 
